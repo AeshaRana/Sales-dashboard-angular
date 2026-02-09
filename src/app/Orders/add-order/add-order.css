@@ -1,0 +1,70 @@
+.container-fluid {
+  display: flex;
+  padding-left: auto;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: var(--header-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 20px rgba(1, 6, 16, 0.34);
+  height: auto;
+  width: fit-content;
+  padding: 1.5rem;
+  /* margin: 20px; */
+}
+form
+{
+
+}
+
+.field-container
+{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.label
+{
+    text-align: start;
+}
+
+.input
+{
+   
+}
+
+.add-btn {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent-border);
+  text-align: center;
+  justify-content: center;
+}
+
+
+.form-error
+{
+ width: 70px;
+  
+  border-radius: 5px;
+  padding: 0.2rem;
+  background: var(--accent-soft);
+  color: var(--negative);
+  border-color: var(--accent-negative-border);
+}
+
+alert
+{
+   background: var(--accent-soft);
+  color: var(--negative);
+  border-color: var(--accent-negative-border);
+}

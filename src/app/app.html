@@ -1,0 +1,13 @@
+<div class="layout">
+  <app-sidebar (navigate)="closeMobileSidebar()"></app-sidebar>
+
+  <div class="overlay" aria-hidden="true" (click)="closeMobileSidebar()"></div>
+
+  <main class="main-content">
+    <app-header (menuToggle)="toggleMobileSidebar()"></app-header>
+    <section class="page-content">
+      <router-outlet></router-outlet>
+    </section>
+    <app-footer></app-footer>
+  </main>
+</div>

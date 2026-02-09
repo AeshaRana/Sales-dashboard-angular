@@ -1,0 +1,52 @@
+<article class="kpi-card">
+    <div class="kpi-top">
+        <h2 class="kpi-title">{{cardDetails.title}}</h2>
+        <span class="kpi-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+                @if(cardDetails.title.toLocaleLowerCase()==="total revenue")
+                {
+                <path d="M12 2v20M7.5 6.5h7a3 3 0 1 1 0 6h-5a3 3 0 1 0 0 6h7" fill="none" stroke="currentColor"
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+                }
+                @else if (cardDetails.title.toLocaleLowerCase()==="total orders") {
+                <path d="M4 6h2l2 10h8l2-7H7" fill="none" stroke="currentColor" stroke-width="1.9"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="10" cy="19" r="1.4" fill="currentColor" />
+                <circle cx="16" cy="19" r="1.4" fill="currentColor" />
+                }
+                @else if (cardDetails.title.toLocaleLowerCase()==="total customers") {
+                <circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.9" />
+                <path d="M4 19a5 5 0 0 1 10 0" fill="none" stroke="currentColor" stroke-width="1.9"
+                    stroke-linecap="round" />
+                <path d="M16 10a2.6 2.6 0 1 0 0-5.2M20 18a4 4 0 0 0-3.2-3.9" fill="none" stroke="currentColor"
+                    stroke-width="1.9" stroke-linecap="round" />
+                }
+                @else {
+                <path d="M4 16l5-5 4 3 7-7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M15 7h5v5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                }
+            </svg>
+        </span>
+    </div>
+    @if (cardDetails.title.toLocaleLowerCase()==="total revenue") {
+    <p class="kpi-value">&#8377;{{cardDetails.value}}</p>
+    }@else {
+    <p class="kpi-value">{{cardDetails.value}}</p>
+    }
+
+    @if(cardDetails.change.includes('+'))
+    {
+    <p class="kpi-change positive">
+        <span aria-hidden="true">&uarr;</span>
+        <span>{{cardDetails.change}}</span>
+    </p>
+    }@else {
+    <p class="kpi-change negative">
+        <span aria-hidden="true">&darr;</span>
+        <span>{{cardDetails.change}}</span>
+    </p>
+    }
+
+</article>

@@ -1,0 +1,94 @@
+.customer-deatils {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-state {
+  margin-top: 16px;
+  padding: 18px 14px;
+  border-radius: 10px;
+  color: var(--header-muted);
+  text-align: center;
+}
+
+.add-btn {
+  width: 70px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent-border);
+  text-align: center;
+  justify-content: center;
+}
+
+table {
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+}
+table th {
+  color: var(--accent);
+}
+
+table td {
+  color: var(--sidebar-muted);
+}
+
+.update-btn {
+  width: 70px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+.remove-btn {
+  width: 70px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem;
+  background: var(--accent-soft);
+  color: var(--negative);
+  border-color: var(--accent-negative-border);
+}
+
+.remove-text
+{
+   color: var(--negative);
+}
+select {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.2rem;
+  border-radius: 5px;
+  border-color: var(--accent-border);
+}
+.opt-value {
+  /* background: var(--accent-soft); */
+  background-color: var(--accent-soft);
+}
+
+select option {
+  width: 70px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.2rem;
+  background: var(--bg-canvas);
+  color: var(--accent);
+  border-color: var(--accent-border);
+  border-bottom: 1px solid var(--accent-border);
+}
+
+
+input
+{
+   background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.2rem;
+  border-radius: 5px;
+  border-color: var(--accent-border);
+}

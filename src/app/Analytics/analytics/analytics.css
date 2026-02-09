@@ -1,0 +1,79 @@
+:host {
+  display: block;
+}
+
+.analytics-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: enter-up 0.58s ease both;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-size: 1.24rem;
+  letter-spacing: 0.01em;
+}
+
+.section-head p {
+  margin: 4px 0 0;
+  color: var(--header-muted);
+  font-size: 0.84rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+app-monthly-sales,
+app-sales-by-category,
+app-sales-by-region {
+  display: block;
+  min-width: 0;
+}
+
+app-monthly-sales {
+  grid-column: span 8;
+}
+
+app-sales-by-category {
+  grid-column: span 4;
+}
+
+app-sales-by-region {
+  grid-column: span 12;
+}
+
+@media (max-width: 1024px) {
+  app-monthly-sales {
+    grid-column: span 12;
+  }
+
+  app-sales-by-category,
+  app-sales-by-region {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 900px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  app-monthly-sales,
+  app-sales-by-category,
+  app-sales-by-region {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .section-head h2 {
+    font-size: 1.12rem;
+  }
+}

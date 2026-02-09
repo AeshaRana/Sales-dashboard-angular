@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="container">
+    <h4>Add order</h4>
+    <form [formGroup]="Orderform" (ngSubmit)="onSubmit()">
+      <div class="field-container">
+        <label for="onumber" class="label">Enter Order Number</label>
+        <input
+          type="number"
+          name="onumber"
+          id="onumber"
+          class="input"
+          formControlName="onum"
+          [required]="true"
+        />
+      </div>
+      <div class="field-container">
+        <label for="cid" class="label">Customer Name</label>
+        <select name="cid" id="cid" formControlName="cid" [required]="true">
+          <option value="" disabled selected>Select customer</option>
+          @for (customer of (customers$ | async); track customer.id) {
+            <option [value]="customer.id">
+              {{ customer.firstName }} {{ customer.lastName }}
+            </option>
+          }
+
+        </select>
+      </div>
+      <div class="field-container">
+        <label for="pid" class="label">Product</label>
+        <select name="pid" id="pid" formControlName="pid" [required]="true">
+          <option value="" disabled selected>Select product</option>
+          @for (product of (products$ | async); track product.pid) {
+            <option [value]="product.pid">
+              {{ product.pname }}
+            </option>
+          }
+        </select>
+      </div>
+      <div class="field-container">
+        <label for="odate" class="label">Order Date</label>
+        <input
+          type="date"
+          name="odate"
+          id="odate"
+          formControlName="odate"
+          [required]="true"
+          [max]="maxDate"
+        />
+      </div>
+      <div class="field-container">
+        <label for="oamount" class="label">Enter Order Amount</label>
+        <input
+          type="number"
+          name="oamount"
+          id="oamount"
+          formControlName="oamount"
+          [required]="true"
+        />
+      </div>
+      <div class="field-container">
+        <label for="ostatus" class="label">Order Status</label>
+        <select name="ostatus" id="" formControlName="ostatus" [required]="true">
+          <option value="" disabled selected>Select status</option>
+          @for (status of statusList; track status.id) {
+            <option [value]="status.status">{{ status.status }}</option>
+          }
+        </select>
+      </div>
+      <div class="field-container">
+        <!-- [disabled]="checkValiadtion()" -->
+        <button type="submit" class="add-btn">Add Order</button>
+      </div>
+    </form>
+  </div>
+</div>

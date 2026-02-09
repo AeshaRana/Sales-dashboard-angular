@@ -1,0 +1,14 @@
+
+ <section class="cards kpi-grid" aria-label="Summary metrics">
+      <!-- <app-card title="Total Revenue" change="+12.4%" value="128,540"></app-card>
+      <app-card title="Total Orders" change="-3.1%" value="2,184"></app-card>
+      <app-card title="Total Customers" change="+8.7%" value="9,742"></app-card>
+      <app-card title="Growth Rate" change="-0.5%" value="18.2%"></app-card> -->
+        @for(card of cards();track card.id)
+        {
+                <app-card [cardDetails]="card"></app-card>
+        }
+
+        <!-- <h1>{{totalRevenue()}}</h1> -->
+
+    </section>

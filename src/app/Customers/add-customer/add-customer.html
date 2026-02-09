@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="container">
+    <h4>Add Customer</h4>
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <div class="field-container">
+        <label for="firstName" class="label">Enter First Name</label>
+        <input type="text" name="firstName" id="firstName" class="input" formControlName="firstName" >
+    </div>
+    <div class="field-container">
+        <label for="lastName" class="label">Enter last name</label>
+        <input type="text" name="lastName" id="lastName" formControlName="lastName" >
+    </div>
+    <div class="field-container">
+        <label for="emailId" class="label">Email id</label>
+        <input type="email" name="emailId" id="emailId" formControlName="emailId" >
+    </div>
+     <div class="field-container">
+        <label for="number" class="label">Enter phone number</label>
+        <input type="phoneNumber" name="phoneNumber" id="phoneNumber" formControlName="phoneNumber" >
+    </div>
+    <div class="field-container">
+        <label for="address" class="label">Enter Address</label>
+        <textarea name="address" id="address" col="5" formControlName="address"></textarea>
+    </div>
+    <div class="field-container">
+        <!-- [disabled]="checkValiadtion()" -->
+        <button type="submit" class="add-btn" >Add Customer</button>
+    </div>
+</form>
+
+
+</div>
+</div>
